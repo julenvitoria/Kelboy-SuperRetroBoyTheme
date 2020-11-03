@@ -27,7 +27,7 @@ if [ -d /home/pi/tmp ]; then
 else
         mkdir /home/pi/tmp
 fi
-git clone https://github.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme "/home/pi/tmp" --branch master --depth=1
+git clone https://github.com/julenvitoria/Kelboy-SuperRetroBoyTheme "/home/pi/tmp" --branch master --depth=1
 echo "COPYING LAUNCHING IMAGES..."
 sleep 3
 cp -R /home/pi/tmp/configs/* /opt/retropie/configs
