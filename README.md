@@ -9,4 +9,4 @@ Connect via ssh or insert this command via terminak on your freeplay
 wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperRetroBoyTheme/main/ThemePlusLaunchings.sh | bash 
 
 
-NOTE: IT'S NECCESARY THAT YOUR GBA HAS INTERNET CONNECTION. THIS SCRIPT WORKS WITH ABSOLUTE PATHS. 
+NOTE: IT'S NECCESARY THAT YOUR RASPBERRY HAS INTERNET CONNECTION.
