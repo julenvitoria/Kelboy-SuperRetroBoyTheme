@@ -6,8 +6,8 @@ if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         echo "Deleting and redownloading..."
         sleep 2
         sudo rm -r "/home/pi/.emulationstation/themes/Super Retroboy/"
-        sleep 0.5
         mkdir -p "/home/pi/.emulationstation/themes/Super Retroboy/" && git clone https://github.com/KALEL1981/Super_Retroboy_Theme.git "/home/pi/.emulationstation/themes/Super Retroboy/" --branch master --depth=1
+        sleep 1
         sudo chown pi:pi "/home/pi/.emulationstation/themes/Super Retroboy/" -R
         cd "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
         sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
@@ -17,6 +17,7 @@ else
         echo "Downloading Super Retroboy theme..."
         sleep 2
         mkdir -p "/home/pi/.emulationstation/themes/Super Retroboy/" && git clone https://github.com/KALEL1981/Super_Retroboy_Theme.git "/home/pi/.emulationstation/themes/Super Retroboy/" --branch master --depth=1
+        sleep 1
         sudo chown pi:pi "/home/pi/.emulationstation/themes/Super Retroboy/" -R
         cd "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
         sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
