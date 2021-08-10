@@ -29,9 +29,14 @@ if [ -d /home/pi/tmp ]; then
 else
         mkdir /home/pi/tmp
 fi
-git clone https://github.com/julenvitoria/Kelboy-SuperRetroBoyTheme "/home/pi/tmp" --branch master --depth=1
+cd /home/pi/tmp
+/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/Kelboy-SuperRetroBoyTheme
 echo "COPYING LAUNCHING IMAGES..."
 sleep 3
-cp -R /home/pi/tmp/configs/* /opt/retropie/configs
+cp -R /home/pi/tmp/Kelboy-SuperRetroBoyTheme/trunk/configs/* /opt/retropie/configs
+cp -R /home/pi/tmp/Kelboy-SuperRetroBoyTheme/trunk/systems/* '/home/pi/.emulationstation/themes/Super Retroboy/'
+cd /home/pi
 sudo rm -r tmp
+sed -i 's/.*<string name="ThemeSet" value=.*/<string name="ThemeSet" value="Super Retroboy" \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
+sed -i 's/.*<string name="TransitionStyle".*/<string name="TransitionStyle" value="instant" \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
 /home/pi/scripts/multi_switch.sh --ES-RESTART
