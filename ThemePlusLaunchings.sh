@@ -34,7 +34,7 @@ cd /home/pi/tmp
 echo "COPYING LAUNCHING IMAGES..."
 sleep 3
 cp -R /home/pi/tmp/Kelboy-SuperRetroBoyTheme/trunk/configs/* /opt/retropie/configs
-cp -R /home/pi/tmp/Kelboy-SuperRetroBoyTheme/trunk/systems/* '/home/pi/.emulationstation/themes/Super Retroboy/'
+cp -R /home/pi/tmp/Kelboy-SuperRetroBoyTheme/trunk/systems/* "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
 cd /home/pi
 sudo rm -r tmp
 sed -i 's/.*<string name="ThemeSet" value=.*/<string name="ThemeSet" value="Super Retroboy" \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
